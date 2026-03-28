@@ -1,6 +1,12 @@
 @media screen and (min-width:992px) {
     #main {
         max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #main > .sp-display-none,
+    #main > #horizontal-compare-table {
+        width: 100%;
     }
 }
 
@@ -10,7 +16,6 @@
         max-width: 860px;
         padding-left: 1.2%;
         padding-right: 1.2%;
-        float: left;
     }
 }
 
@@ -20,7 +25,9 @@
         max-width: 320px;
         padding-left: 1.2%;
         padding-right: 1.2%;
-        float: right;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
     }
 }
 
