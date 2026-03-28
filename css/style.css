@@ -1474,7 +1474,7 @@ footer .copyright {
 
 @media screen and (min-width: 992px) {
   .pc-display-none {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -1671,7 +1671,7 @@ footer .copyright {
 
 .first-rank {
   background: white;
-  padding: 20px 7px 0px 7px;
+  padding: 20px 7px 10px 7px;
   margin-bottom: 12px;
 }
 .rank-cta {
