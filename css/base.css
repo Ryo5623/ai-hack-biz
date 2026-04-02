@@ -1678,26 +1678,26 @@ body .is-layout-grid {
 
 /* --- ボタンのデザイン --- */
 .fixed_cta .cta_btn {
-  /* 参考画像の緑色グラデーション */
-  
-  background: linear-gradient(45deg, #ffc107 0%, #f76a35 100%);
+  background: linear-gradient(180deg, #e83a6f 0%, #D4215F 50%, #b01a4e 100%);
   color: #fff;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.4;
-  padding: 10px 50px; /* 横幅を広めに確保 */
-  border-radius: 6px;
+  padding: 10px 50px;
+  border-radius: 100px;
   text-align: center;
-  box-shadow: 0 4px 0 #863a1e, 0 5px 10px rgba(0,0,0,0.3); /* 下部の立体的な影 */
+  box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2);
   transition: all 0.2s ease;
   position: relative;
-  overflow: hidden; /* 光るエフェクトがはみ出さないように */
+  overflow: hidden;
+  animation: cta-btn-press 3.5s linear infinite;
 }
 
 /* ホバー時の挙動（少し沈む） */
 .fixed_cta .cta_btn:hover {
+  animation: none;
   transform: translateY(2px);
-  box-shadow: 0 2px 0 #863a1e, 0 3px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 0 #8c1440, 0 2px 4px rgba(0,0,0,.15);
   opacity: 0.95;
 }
 
@@ -1712,18 +1712,28 @@ body .is-layout-grid {
   position: absolute;
   top: 0;
   left: -100%;
-  width: 50%;
+  width: 60%;
   height: 100%;
-  /* 光の帯 */
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-25deg); /* 斜めに傾ける */
-  animation: shine 4s infinite; /* 4秒ごとに光る */
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  transform: skewX(-20deg);
+  animation: cta-btn-shine 3.5s infinite;
 }
 
-@keyframes shine {
-  0% { left: -100%; }
-  50% { left: 200%; } /* 素早く通り過ぎる */
-  100% { left: 200%; } /* 残りの時間は待機 */
+@keyframes cta-btn-shine {
+  0% { left: -100%; opacity: 0; }
+  59% { left: -100%; opacity: 0; }
+  60% { left: -100%; opacity: 1; }
+  78% { left: 150%; opacity: 1; }
+  79% { left: 150%; opacity: 0; }
+  100% { left: 150%; opacity: 0; }
+}
+
+@keyframes cta-btn-press {
+  0% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  60% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  70% { box-shadow: none; transform: translateY(3px); }
+  80% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
+  100% { box-shadow: 0 3px 0 #8c1440, 0 4px 8px rgba(0,0,0,.2); transform: translateY(0); }
 }
 
 /* --- レスポンシブ調整（画面幅が狭いPCやタブレット向け） --- */
