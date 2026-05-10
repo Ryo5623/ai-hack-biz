@@ -1,0 +1,25 @@
+{
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "https://ai-hack.jp/biz", "permanent": true },
+
+    { "source": "/company", "destination": "https://ai-hack.jp/about", "permanent": true },
+    { "source": "/company/", "destination": "https://ai-hack.jp/about", "permanent": true },
+
+    { "source": "/policy", "destination": "https://ai-hack.jp/privacy", "permanent": true },
+    { "source": "/policy/", "destination": "https://ai-hack.jp/privacy", "permanent": true },
+
+    { "source": "/research", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/research/", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+
+    { "source": "/contents/column-1", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/contents/column-1/", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/contents/column-2", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/contents/column-2/", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/contents/column-3", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+    { "source": "/contents/column-3/", "destination": "https://ai-hack.jp/biz/articles/generative-ai-training-chaos-map", "permanent": true },
+
+    { "source": "/contents/:path*", "destination": "https://ai-hack.jp/biz", "permanent": true },
+    { "source": "/:path*", "destination": "https://ai-hack.jp/biz", "permanent": true }
+  ]
+}
