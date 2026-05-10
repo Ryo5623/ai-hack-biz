@@ -1,7 +1,7 @@
 {
   "trailingSlash": false,
   "redirects": [
-    { "source": "/", "destination": "https://ai-hack.jp/biz", "permanent": true },
+    { "source": "/", "destination": "https://ai-hack.jp/biz/articles/ai-training-list", "permanent": true },
 
     { "source": "/company", "destination": "https://ai-hack.jp/about", "permanent": true },
     { "source": "/company/", "destination": "https://ai-hack.jp/about", "permanent": true },
